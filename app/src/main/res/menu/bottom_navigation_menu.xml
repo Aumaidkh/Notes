@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/check"
+        android:title="CheckList"
+        android:icon="@drawable/ic_check"
+        android:iconTint="?attr/icon_color"/>
+
+    <item
+        android:id="@+id/mic"
+        android:title="Audio"
+        android:icon="@drawable/ic_mic"
+        android:iconTint="?attr/icon_color"/>
+
+    <item
+        android:id="@+id/camera"
+        android:title="Photo"
+        android:icon="@drawable/ic_camera"
+        android:iconTint="?attr/icon_color"/>
+
+    <item
+        android:id="@+id/brush"
+        android:title="Paint"
+        android:icon="@drawable/ic_brush"
+        android:iconTint="?attr/icon_color"/>
+
+    <item
+        android:id="@+id/placeHolder"
+        android:title=""
+        />
+
+</menu>

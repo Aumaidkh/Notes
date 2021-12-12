@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="background_color" format="color"/>
+    <attr name="text_primary_color" format="color"/>
+    <attr name="text_secondary_color" format="color"/>
+    <attr name="card_background_color" format="color"/>
+    <attr name="theme_toggle_button_color" format="color"/>
+    <attr name="app_bar_tint" format="color"/>
+    <attr name="icon_color" format="color"/>
+    <attr name="bottom_app_bar_tint" format="color"/>
+</resources>
