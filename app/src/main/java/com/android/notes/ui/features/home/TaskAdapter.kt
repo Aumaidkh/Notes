@@ -8,7 +8,7 @@ import com.android.notes.databinding.RvTaskItemBinding
 
 
 class TaskAdapter(
-    private val todoItems: ArrayList<TodoItem>
+    private val todoItems: List<TodoItem>
 ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {

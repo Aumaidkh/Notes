@@ -11,10 +11,11 @@ import com.android.notes.data.db.entities.Note
     version = 1,
     exportSchema = false
 )
-//@TypeConverters(Converters::class)
+@TypeConverters(Converters::class)
 abstract class NotesDatabase: RoomDatabase() {
 
     abstract fun getNotesDao(): NotesDao
 
+    //TypeConverters not working still
 
 }

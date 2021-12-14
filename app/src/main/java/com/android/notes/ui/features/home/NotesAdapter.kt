@@ -57,8 +57,36 @@ class NotesAdapter(
         val rv_task = binding.rvTaskItems
 
         fun bind(item: Note){
-            binding.tvTaskName.text = item.note_title
-            binding.etBody.setText(item.note_body)
+            if(item.tasks?.isNotEmpty() == true){
+                //hiding the edit text
+                binding.etBody.isVisible = false
+                // Create a layout manager
+                // to assign a layout
+                // to the RecyclerView.
+                val tasklayoutmanager = LinearLayoutManager(context)
+                // Since this is a nested layout, so
+                // to define how many child items
+                // should be prefetched when the
+                // child RecyclerView is nested
+                // inside the parent RecyclerView,
+                // we use the following method
+                tasklayoutmanager.initialPrefetchItemCount = item.tasks?.size ?: 0
+
+                // Create an instance of the child
+                // item view adapter and set its
+                // adapter, layout manager and RecyclerViewPool
+                val taskAdapter = item.tasks?.let { TaskAdapter(it) }
+
+                binding.rvTaskItems.apply {
+                    adapter = taskAdapter
+                    layoutManager = tasklayoutmanager
+                    setRecycledViewPool(viewpool)
+                }
+            }else {
+                //Showing Body of the Note
+                binding.etBody.setText(item.note_body)
+
+            }
 
         }
     }

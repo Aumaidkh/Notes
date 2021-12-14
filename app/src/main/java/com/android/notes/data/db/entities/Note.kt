@@ -4,6 +4,8 @@ package com.android.notes.data.db.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.android.notes.data.db.Converters
 
 
 @Entity(
@@ -20,16 +22,9 @@ data class Note(
     @ColumnInfo(name = "desc")
     var note_body: String? = null,
 
-//    @ColumnInfo(name = "tasks")
-//    var tasks:  ArrayList<Task>? = null
-) {
-    var has_checklist: Boolean? = false
-
-    init {
-//        if(tasks != null){
-//            has_checklist = true
-//        }
-    }
-}
+//    @TypeConverters(Converters::class)
+    @ColumnInfo(name = "tasks")
+    var tasks:  List<TodoItem>? = null
+)
 
 
